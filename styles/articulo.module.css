@@ -1,0 +1,75 @@
+/* ESTILOS DE ARTICULO */
+.gridArticulos{
+    display: grid;
+    grid-template-columns: repeat(3,20rem);
+    width: 120px;
+    margin-top: 15px;
+}
+
+.articulo img{
+    width: 300px;
+    height: 250px;
+}
+
+.articulo p{
+    font-weight: lighter;
+}
+
+/* FIN ESTILOS DE ARTICULO */
+
+/* ESTILOS DE TAG */
+.gridTags{
+    display: flex;
+}
+
+.tag{
+    margin-right: 17px;
+    margin-top: -20px;
+    font-family: "Arial", "sans-serif";
+    font-size: 0.9rem;
+    color: #0074c4;
+}
+
+/* FIN ESTILOS DE TAG */
+
+/* ESTILOS DE BOTON */
+
+.cajaBoton{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+}
+.boton{
+    background-color: #ffffff;
+    border: 1px solid #0074c4;
+    color: #0074c4;
+    font-family: "Arial", "sans-serif";
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: opacity .2s ease-in-out;
+    width: 250px;
+    height: 35px;
+}
+
+.boton:hover {
+    background-color: #0074c4; /* Green */
+    color: white;
+  }
+
+/* FIN  ESTILOS DE BOTON */
+
+.transparencia{
+    content: '';
+    position: absolute;
+    top: 125%;
+    bottom: 0px;
+    width: 83%;
+    z-index: 1;
+    display: inline-block;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.8) 60%);
+    height: 341px;
+}
