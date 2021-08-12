@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React, { useContext } from 'react';
+import React from 'react';
 import Boton from "../components/Boton";
 import stylesArticles from "../styles/articulo.module.css"
 
@@ -13,7 +13,7 @@ export async function getServerSideProps (context){
     }
 }
 
-const detailArticle = (props) => {
+const DetailArticle = (props) => {
     const router = useRouter();
     const data= JSON.parse(JSON.stringify(props))
     return(
@@ -30,4 +30,4 @@ const detailArticle = (props) => {
     );
 }
 
-export default detailArticle
+export default DetailArticle

@@ -13,7 +13,7 @@ export async function getServerSideProps (context){
     }
 }
 
-const detailTag = (props) => {
+const DetailTag = (props) => {
     const router = useRouter();
     return(
         <div style={{marginLeft:20}}>
@@ -30,4 +30,4 @@ const detailTag = (props) => {
     );
 }
 
-export default detailTag
+export default DetailTag
