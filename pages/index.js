@@ -86,6 +86,7 @@ const Home = ({articulos}) => {
 
                 }}} 
                 as={"/tema/"+ tag.slug} 
+                passHref
                 >
                 <div>
                   <Tag
@@ -108,6 +109,7 @@ const Home = ({articulos}) => {
                             basic:art.headlines.basic,
                 }}} 
                 as={"/"+ art._id} 
+                passHref
                 >
                   <div>
                     <Articulo
