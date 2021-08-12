@@ -75,47 +75,51 @@ const Home = ({articulos}) => {
       <main style={{marginLeft:40}}>
           <h1 className={styles.titulo}>Acumulado Grilla</h1>
           <div className={stylesArticles.gridTags}>   
-            {tags.map(tag =>(
-              <Link 
+            {tags.map(tag =>( 
+              <div key={tag.id}>    
+                <Link 
                 href={{pathname:"/tema/[slug]", 
                       query:{
                           id:tag.id,
                           text:tag.text,
                           slug:tag.slug
 
-              }}} 
-              as={"/tema/"+ tag.slug} 
-              >
-              <div  key={tag.id}>
-                <Tag
-                  className={stylesArticles.tag}
-                  //url="#"
-                  nombre={tag.text + "·"}
-                /> 
+                }}} 
+                as={"/tema/"+ tag.slug} 
+                >
+                <div>
+                  <Tag
+                    className={stylesArticles.tag}
+                    //url="#"
+                    nombre={tag.text + "·"}
+                  /> 
+                </div>
+                </Link>
               </div>
-              </Link>
             ))}
           </div>
           <div className={stylesArticles.gridArticulos}>
-            {articulos.slice(0, articlesNum).map(art=>(
-              <Link
-              href={{pathname:"/[id]", 
-                      query:{
-                          id:art._id,
-                          basic:art.headlines.basic,
-              }}} 
-              as={"/"+ art._id} 
-              >
-                <div key={art._id}>
-                  <Articulo
-                    className={stylesArticles.articulo}
-                    //url="#"
-                    imagenNota={art.promo_items.basic.url}
-                    titulo={art.headlines.basic}
-                    fecha={moment(art.display_date).format('LL')}
-                  />
-                </div>
-              </Link>
+            {articulos.slice(0, articlesNum).map(art=>( 
+              <div key={art._id}>   
+                <Link
+                href={{pathname:"/[id]", 
+                        query:{
+                            id:art._id,
+                            basic:art.headlines.basic,
+                }}} 
+                as={"/"+ art._id} 
+                >
+                  <div>
+                    <Articulo
+                      className={stylesArticles.articulo}
+                      //url="#"
+                      imagenNota={art.promo_items.basic.url}
+                      titulo={art.headlines.basic}
+                      fecha={moment(art.display_date).format('LL')}
+                    />
+                  </div>
+                </Link>
+              </div>
             ))}
              <div 
               style={{display: articlesNum > 9 ? 'none' : 'block' }}
