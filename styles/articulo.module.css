@@ -68,8 +68,8 @@
     top: 125%;
     bottom: 0px;
     width: 83%;
-    z-index: 1;
-    display: inline-block;
+    /* z-index: 1;
+    display: inline-block; */
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.8) 60%);
-    height: 341px;
+    height: 30%;
 }

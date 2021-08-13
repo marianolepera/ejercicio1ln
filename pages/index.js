@@ -123,11 +123,11 @@ const Home = ({articulos}) => {
                 </Link>
               </div>
             ))}
-             <div 
+             {/* <div 
               style={{display: articlesNum > 9 ? 'none' : 'block' }}
               className={stylesArticles.transparencia}
              >
-             </div>
+             </div> */}
           </div>
           <div 
           className={stylesArticles.cajaBoton} 
